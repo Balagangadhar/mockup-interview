@@ -746,9 +746,8 @@
                         </configuration>
                         <executions>
                             <execution>
-                              <phase>none</phase>
                                 <goals>
-                                    <goal>repackage</goal>
+                                    <goal>build-info</goal>
                                 </goals>
                             </execution>
                         </executions>
