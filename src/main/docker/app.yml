@@ -1,0 +1,14 @@
+version: '2'
+services:
+    mockupinterview-app:
+        image: mockupinterview
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://mockupinterview-postgresql:5432/mockupinterview
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    mockupinterview-postgresql:
+        extends:
+            file: postgresql.yml
+            service: mockupinterview-postgresql
